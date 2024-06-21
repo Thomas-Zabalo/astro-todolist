@@ -1,17 +1,10 @@
 ---
-import Code from 'astro/components/Code.astro';
-
-import Confettis from '../components/ConfettiLauncher.astro'
-
 import Taskify from '../assets/taskify-logo.svg?raw';
-import FlowbiteLogo from '../assets/flowbite-logo.svg?raw';
-
 import * as readMe from '../../README.md';
-import { SITE_TITLE } from '../app/constants.js';
 ---
 
 <div
-	class="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 mb-20 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
+	class=" bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
 >
 	<header
 		class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16"
@@ -32,38 +25,15 @@ import { SITE_TITLE } from '../app/constants.js';
 				>TASKIFY</span
 		>
 		</p>
-
-			<!-- <div class="flex justify-center w-full">
-				<Confettis>
-					<button
-						type="button"
-						class="text-blue-800 hover:text-white border border-blue-700 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-100 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
-						>Click me!</button
-					>
-				</Confettis>
-			</div> -->
 		</div>
-
-		<!-- <div class="flex justify-center w-full my-16">
-			<div set:html={FlowbiteLogo} class="svg-inline w-16 h-16" />
-		</div> -->
 	</header>
 
-	<!-- <section class="flex justify-center w-full pb-24">
-		<div class="w-full format dark:format-invert">
-			<Code
-				lang={'powershell' /* Looks cool */}
-				code={`git clone \\
-https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
-			/>
-		</div>
-	</section> -->
+
 
 	<article class="flex justify-center pt-32 pb-32">
 		<div class="w-full readme format dark:format-invert lg:format-lg">
 			<h1 class="text-center">
-				<!-- {readMe.getHeadings()[0].text} -->
-				{SITE_TITLE}
+Qu'es ce que c'est TASKIFY ?
 			</h1>
 			<readMe.Content />
 		</div>
