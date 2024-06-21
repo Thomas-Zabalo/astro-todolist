@@ -4,7 +4,7 @@ import * as readMe from '../../README.md';
 ---
 
 <div
-	class=" bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
+	class="bg-gradient-to-b from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 p-4 lg:p-16 shadow-xl shadow-slate-200 dark:shadow-slate-900"
 >
 	<header
 		class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16"
@@ -12,29 +12,26 @@ import * as readMe from '../../README.md';
 		<div class="flex justify-center w-full">
 			<div
 				set:html={Taskify}
-				class="svg-inline w-16 h-16 text-violet-700 dark:text-violet-100"
+				class="animate-svg transition duration-500 svg-inline w-20 h-20 lg:w-16 lg:h-16 text-violet-700 dark:text-violet-100"
 			/>
 		</div>
 
 		<div class="format dark:format-invert lg:format-lg mt-32">
 			<p
-			class="text-4xl lg:text-8xl dark:text-slate-200 text-slate-600 leading-tight text-center"
-		>
-			Bienvenue sur <span
-				class="text-4xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-violet-800 dark:from-pink-300 dark:to-violet-700 no-underline"
-				>TASKIFY</span
-		>
-		</p>
+				class="text-4xl sm:text-8xl lg:text-8xl dark:text-slate-200 text-slate-600 leading-tight text-center"
+			>
+				Bienvenue sur <span
+					class="animate-gradient text-4xl sm:text-8xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-violet-800 dark:from-pink-300 dark:to-violet-700 no-underline"
+				>
+					TASKIFY
+				</span>
+			</p>
 		</div>
 	</header>
 
-
-
 	<article class="flex justify-center pt-32 pb-32">
 		<div class="w-full readme format dark:format-invert lg:format-lg">
-			<h1 class="text-center">
-Qu'es ce que c'est TASKIFY ?
-			</h1>
+			<h1 class="text-center">Qu'es ce que c'est TASKIFY ?</h1>
 			<readMe.Content />
 		</div>
 	</article>
@@ -50,4 +47,50 @@ Qu'es ce que c'est TASKIFY ?
 		height: 100%;
 		width: 100%;
 	}
+	.animate-gradient {
+		background-size: 300%;
+		-webkit-animation: animatedgradient 6s ease infinite alternate;
+		-moz-animation: animatedgradient 6s ease infinite alternate;
+		animation: animatedgradient 6s ease infinite alternate;
+	}
+
+	@keyframes animatedgradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+.animate-svg {
+  -webkit-animation: animatedsvg 8s ease infinite;
+  -moz-animation: animatedsvg 8s ease infinite;
+  animation: animatedsvg 8s ease infinite;
+}
+
+@keyframes animatedsvg {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(270deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 </style>

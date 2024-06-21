@@ -34,11 +34,9 @@ L'application utilise un design moderne et minimaliste pour une expérience util
 
 Vous avez la possibilité de changer de thème en fonction de vos préférences :
 
-<div class="flex format dark:format-invert lg:format-lg mt-32">
-		![Aperçu de l'application](https://example.com/todo-list-preview.gif) 
-	 ![Aperçu de l'application](https://example.com/todo-list-preview.gif) 
-</div>
+<div class="">
 
+</div>
 
 ## 🧑‍🚀 Pour les développeurs
 
@@ -80,6 +78,12 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les ét
 ```sh cp
 (git checkout -b feature/ma-fonctionnalité)
 ```
-- Commitez vos modifications (git commit -m 'Ajout de ma fonctionnalité').
-- Poussez votre branche (git push origin feature/ma-fonctionnalité).
+- Commitez vos modifications 
+```sh
+(git commit -m 'Ajout de ma fonctionnalité').
+```
+- Poussez votre branche
+```sh
+(git push origin feature/ma-fonctionnalité).
+```
 - Ouvrez une Pull Request.
