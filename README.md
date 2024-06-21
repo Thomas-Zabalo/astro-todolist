@@ -15,7 +15,9 @@ Pour marquer une tâche comme terminée, cochez la case à côté du nom de la t
 Editer une tâche
 Pour éditer une tâche, cliquez sur l'icône de crayon à côté de la tâche que vous souhaitez modifier. Faites vos modifications et enregistrez-les.
 
-![To-Do List](https://example.com/todo-list-screenshot.png) 
+<div class="center">
+<img class="rounded-md overflow-hidden w-full" alt="Application TO DO" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/59add277-625c-4bbd-b96e-bd4621e9354f">
+</div>
 
 ## 🚀 Fonctionnalités
 
@@ -36,6 +38,9 @@ Vous avez la possibilité de changer de thème en fonction de vos préférences 
 </div>
 
 ## 🧑‍🚀 Pour les développeurs
+
+Rendez vous sur Github et commencer à Fork le projet pour avoir une copie des dossiers sur votre repo Github
+[Go sur Github](https://github.com/Thomas-Zabalo/astro-todolist).
 
 Clonez le repository :
 ```sh
@@ -72,7 +77,7 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les ét
 
 - Fork le projet.
 <div align="center">
-<img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/3eda186a-fa85-4ed1-ba56-1d93d0a05583">
+<img class="w-full rounded-md overflow-hidden" alt="Fork_projet" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/3eda186a-fa85-4ed1-ba56-1d93d0a05583">
 </div>
 
 - Créez une branche pour votre fonctionnalité 
@@ -83,12 +88,12 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les ét
 ```sh
 (git commit -m 'Ajout de ma fonctionnalité').
 ```
-- Poussez votre branche
+- Pushez votre branche
 ```sh
 (git push origin feature/ma-fonctionnalité).
 ```
 - Ouvrez une Pull Request.
 
 <div align="center">
-<img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/60aa919a-aa20-4b7b-8fb6-1ddac016210b">
+<img class="w-full rounded-md overflow-hidden" alt="Pull_Request" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/60aa919a-aa20-4b7b-8fb6-1ddac016210b">
 </div>
