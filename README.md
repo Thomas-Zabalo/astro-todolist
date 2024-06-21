@@ -31,7 +31,7 @@ L'application utilise un design moderne et minimaliste pour une expérience util
 Vous avez la possibilité de changer de thème en fonction de vos préférences :
 
 <div class="flex gap-4 center">
-<img class="rounded-md overflow-hidden w-1/2 lg:w-1/3" alt="Light Theme" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/6b01296f-c835-4571-b2a2-9ae620d55c8a">
+<img class="rounded-md overflow-hidden w-1/2 lg:w-1/3" alt="Light Theme" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/0ba2c656-775b-481c-a5eb-0f1f3be6997f">
 <img class="rounded-md overflow-hidden w-1/2 lg:w-1/3" alt="Dark Theme" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/0b1a6e85-5260-4611-a069-3d740f0178b1">
 </div>
 
