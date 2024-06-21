@@ -87,3 +87,5 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les ét
 (git push origin feature/ma-fonctionnalité).
 ```
 - Ouvrez une Pull Request.
+![image](https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/60aa919a-aa20-4b7b-8fb6-1ddac016210b)
+
