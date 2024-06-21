@@ -25,18 +25,10 @@ Pour éditer une tâche, cliquez sur l'icône de crayon à côté de la tâche q
 - **Editer des tâches** : Modifiez les tâches existantes pour les mettre à jour.
 - **Organiser par priorité** : Classez vos tâches par ordre de priorité pour mieux les gérer.
 
-## 📸 Aperçu
-
-![Aperçu de l'application](https://example.com/todo-list-preview.gif) 
-
-# 🖌️ Style et Design
+## 🖌️ Style et Design
 L'application utilise un design moderne et minimaliste pour une expérience utilisateur agréable. 
 
 Vous avez la possibilité de changer de thème en fonction de vos préférences :
-
-<div class="">
-
-</div>
 
 ## 🧑‍🚀 Pour les développeurs
 
@@ -70,10 +62,14 @@ Pour démarrer le serveur en production :
 npm start
 ```
 
-# 🤝 Contribution 
+## 🤝 Contribution 
 Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les étapes ci-dessous :
 
 - Fork le projet.
+<div align="center">
+<img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/3eda186a-fa85-4ed1-ba56-1d93d0a05583">
+</div>
+
 - Créez une branche pour votre fonctionnalité 
 ```sh cp
 (git checkout -b feature/ma-fonctionnalité)
@@ -87,5 +83,7 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre les ét
 (git push origin feature/ma-fonctionnalité).
 ```
 - Ouvrez une Pull Request.
-![image](https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/60aa919a-aa20-4b7b-8fb6-1ddac016210b)
 
+<div align="center">
+<img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://github.com/Thomas-Zabalo/astro-todolist/assets/150163380/60aa919a-aa20-4b7b-8fb6-1ddac016210b">
+</div>
