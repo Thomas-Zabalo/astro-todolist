@@ -16,70 +16,116 @@
 		</p>
 	</div>
 
-    <div class="md:px-12 lg:px-20 xl:px-40 2xl:px-60 pt-12">
-        <div class="grid gap-4 xl:grid-cols-2 md:grid-cols-2 2xl:grid-cols-2">
-            <!-- Light theme -->
-            <div id="lightTheme" class="bg-white rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl cursor-pointer">
-                <div>
-                    <span class="inline-flex items-center justify-center p-2 bg-green-400 rounded-md shadow-lg">
-                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><!-- ... --></svg>
-                    </span>
-                </div>
-                <h3 class="text-slate-900 mt-5 text-base font-medium tracking-tight">
-                    Light Design
-                </h3>
-                <p class="text-slate-500 mt-2 text-sm">
-                    Meilleure visibilité, parfait pour les environnements bien éclairés.
-                </p>
-            </div>
+	<div class="md:px-12 lg:px-20 xl:px-40 2xl:px-60 pt-12">
+		<div class="grid gap-4 xl:grid-cols-2 md:grid-cols-2 2xl:grid-cols-2">
+			<!-- Light theme -->
+			<div
+				id="lightTheme"
+				class="bg-white rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl cursor-pointer"
+			>
+				<div>
+					<span
+						class="inline-flex items-center justify-center p-2 bg-green-400 rounded-md shadow-lg"
+					>
+						<svg
+							class="h-6 w-6 text-white"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							aria-hidden="true"><!-- ... --></svg
+						>
+					</span>
+				</div>
+				<h3 class="text-slate-900 mt-5 text-base font-medium tracking-tight">
+					Light Design
+				</h3>
+				<p class="text-slate-500 mt-2 text-sm">
+					Meilleure visibilité, parfait pour les environnements bien éclairés.
+				</p>
+			</div>
 
-            <!-- Dark theme -->
-            <div id="darkTheme" class="bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl cursor-pointer">
-                <div>
-                    <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
-                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><!-- ... --></svg>
-                    </span>
-                </div>
-                <h3 class="text-white mt-5 text-base font-medium tracking-tight">
-                    Dark Design
-                </h3>
-                <p class="text-slate-400 mt-2 text-sm">
-                    Réduit la fatigue, idéal pour les environnements peu éclairés et les utilisations prolongées.
-                </p>
-            </div>
-        </div>
-    </div>
+			<!-- Dark theme -->
+			<div
+				id="darkTheme"
+				class="bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl cursor-pointer"
+			>
+				<div>
+					<span
+						class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+					>
+						<svg
+							class="h-6 w-6 text-white"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							aria-hidden="true"><!-- ... --></svg
+						>
+					</span>
+				</div>
+				<h3 class="text-white mt-5 text-base font-medium tracking-tight">
+					Dark Design
+				</h3>
+				<p class="text-slate-400 mt-2 text-sm">
+					Réduit la fatigue, idéal pour les environnements peu éclairés et les
+					utilisations prolongées.
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Récupérer le thème actuel depuis localStorage
-        const currentTheme = localStorage.getItem('color-theme');
+	document.addEventListener('DOMContentLoaded', function () {
+		// Récupérer le thème actuel depuis localStorage
+		const currentTheme = localStorage.getItem('color-theme');
 
-        // Sélectionner le bon thème au chargement de la page
-        if (currentTheme === 'light') {
-            document.getElementById('lightTheme').classList.add('selected-theme');
-        } else if (currentTheme === 'dark') {
-            document.getElementById('darkTheme').classList.add('selected-theme');
-        }
+		// Sélectionner le bon thème au chargement de la page
+		if (currentTheme === 'light') {
+			document.getElementById('lightTheme').classList.add('selected-theme');
+		} else if (currentTheme === 'dark') {
+			document.getElementById('darkTheme').classList.add('selected-theme');
+		}
 
-        // Ajouter des événements de clic pour changer de thème
-        document.getElementById('lightTheme').addEventListener('click', function () {
-            localStorage.setItem('color-theme', 'light');
-            location.reload();
-            console.log(localStorage.getItem('color-theme'));
-        });
+		// Ajouter des événements de clic pour changer de thème
+		document
+			.getElementById('lightTheme')
+			.addEventListener('click', function () {
+				localStorage.setItem('color-theme', 'light');
+				location.reload();
+				console.log(localStorage.getItem('color-theme'));
+			});
 
-        document.getElementById('darkTheme').addEventListener('click', function () {
-            localStorage.setItem('color-theme', 'dark');
-            location.reload();
-            console.log(localStorage.getItem('color-theme'));
-        });
-    });
+		document.getElementById('darkTheme').addEventListener('click', function () {
+			localStorage.setItem('color-theme', 'dark');
+			location.reload();
+			console.log(localStorage.getItem('color-theme'));
+		});
+	});
 </script>
 
 <style>
-    .selected-theme {
-        border: 2px solid #4CAF50; 
-    }
+	.selected-theme {
+		border: 2px solid #4caf50;
+	}
+
+	.animate-gradient {
+		background-size: 300%;
+		-webkit-animation: animatedgradient 6s ease infinite alternate;
+		-moz-animation: animatedgradient 6s ease infinite alternate;
+		animation: animatedgradient 6s ease infinite alternate;
+	}
+
+	@keyframes animatedgradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
 </style>
