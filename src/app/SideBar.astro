@@ -9,7 +9,7 @@ import { url } from '../lib/data.js';
 >
 
 	<div
-		class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+		class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition duration-300"
 	>
 		<div
 			class:list={[
@@ -19,10 +19,9 @@ import { url } from '../lib/data.js';
 				'dark:scrollbar-thumb-slate-900 dark:scrollbar-track-gray-800',
 			]}
 		>	<div
-		class="flex flex-col space-y-1 items-center"
-	>
 
-	<h2 class="flex items-center p-2 text-base text-gray-900 rounded-lg group dark:text-gray-200">TASKIFY</h2>
+		class="flex flex-col space-y-1 items-center bg-white dark:bg-gray-800"
+	<h2 class="text-base text-gray-900 dark:text-gray-200">TASKIFY</h2>
 	</div>
 
 			<div
@@ -54,7 +53,7 @@ import { url } from '../lib/data.js';
 					</li>
 					<li>
 						<a
-							href={url()}
+							href={url('dashboard')}
 							class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700"
 						>
 							<svg
@@ -128,7 +127,7 @@ import { url } from '../lib/data.js';
 			sidebar-bottom-menu
 		>
 			<a
-				href={url()}
+				href={url('themes')}
 							data-tooltip-target="tooltip-theme"
 				class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
 			>
