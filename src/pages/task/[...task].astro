@@ -1,0 +1,39 @@
+---
+import LayoutSidebar from '../../app/LayoutSidebar.astro';
+import DashBoard from '../../components/DashBoard.astro';
+
+export async function getTask() {
+  const url = "http://localhost:3000/Tache";
+  
+  const fetchOptions = {
+    method: "GET",
+  };
+
+  try {
+    const response = await fetch(url, fetchOptions);
+    const dataJSON = await response.json();
+    console.log(dataJSON); 
+    return dataJSON;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+export async function getStaticPaths() {
+  const taskEntries = await getTask();
+  const paths = taskEntries.map((entry) => ({
+    params: { task: entry.name },
+  }));
+  return paths;
+}
+
+
+const { title, text, project, data } = Astro.props;
+---
+
+<LayoutSidebar>
+  <DashBoard name={project} info={data} />
+  <h1>{title}</h1>
+  <p>{text}</p>
+</LayoutSidebar>

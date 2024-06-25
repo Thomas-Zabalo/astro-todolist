@@ -1,0 +1,62 @@
+---
+export const colors = {
+    color1: "#E2A5FF",
+    color2: '#B1FFA5',
+    color3: '#FFBCA7',
+    color4: '#A7F4FF',
+    color5: '#A7BAFF',
+    color6: '#FFA7EC',
+    color7: '#76A675',
+    color8: '#4AD4CC',
+    color9: '#D83684',
+    color10: '#F671F9',
+    color11: '#FF7C7C',
+    color12: '#2C93CD',
+}
+---
+<section class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16 ">
+<div
+    class="lg:w-1/2 md:w-3/5  w-4/5 p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+    <h3 class="mb-4 text-xl font-semibold dark:text-white">
+        Ajouter une nouvelle tâche
+    </h3>
+    <div class="mb-4">
+        <label
+        for="name-task"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Comment vous voulez l'appelez ?</label
+    >
+    <input
+        type="text"
+        name="name-task"
+        id="name-task"
+        class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+        placeholder="Bonnie"
+        required
+    />
+    </div>
+
+    <div class="mb-4">
+        <label
+        for="name-task"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Choisissez une couleur pour votre tâche</label
+    >
+   {Object.keys(colors).map((colorKey) => (
+    <label class="flex items-center mb-2" key={colorKey}>
+      <input
+        type="checkbox"
+        id={colorKey}
+        name="color-task"
+        class="form-checkbox h-5 w-5 text-primary-600 transition duration-150 ease-in-out"
+      />
+      <span class="ml-2 text-sm text-gray-900 dark:text-white">{colorKey}</span>
+      <svg
+        class="ml-2 flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill={colors[colorKey]} />
+      </svg>
+    </label>
+  ))}
+    </div>
+</section>
