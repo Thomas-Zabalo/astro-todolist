@@ -1,62 +1,133 @@
 ---
-export const colors = {
-    color1: "#E2A5FF",
-    color2: '#B1FFA5',
-    color3: '#FFBCA7',
-    color4: '#A7F4FF',
-    color5: '#A7BAFF',
-    color6: '#FFA7EC',
-    color7: '#76A675',
-    color8: '#4AD4CC',
-    color9: '#D83684',
-    color10: '#F671F9',
-    color11: '#FF7C7C',
-    color12: '#2C93CD',
-}
+export const colors = [
+{ hexa: "#E2A5FF", id: "1" },
+{ hexa: "#B1FFA5", id: "2" },
+{ hexa: "#FFBCA7", id: "3" },
+{ hexa: "#A7F4FF", id: "4" },
+{ hexa: "#A7BAFF", id: "5" },
+{ hexa: "#FFA7EC", id: "6" },
+{ hexa: "#76A675", id: "7" },
+{ hexa: "#4AD4CC", id: "8" },
+{ hexa: "#D83684", id: "9" },
+{ hexa: "#F671F9", id: "10" },
+{ hexa: "#FF7C7C", id: "11" },
+{ hexa: "#2C93CD", id: "12" },
+];
 ---
-<section class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16 ">
-<div
-    class="lg:w-1/2 md:w-3/5  w-4/5 p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-    <h3 class="mb-4 text-xl font-semibold dark:text-white">
-        Ajouter une nouvelle tâche
-    </h3>
-    <div class="mb-4">
-        <label
-        for="name-task"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Comment vous voulez l'appelez ?</label
-    >
-    <input
-        type="text"
-        name="name-task"
-        id="name-task"
-        class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-        placeholder="Bonnie"
-        required
-    />
-    </div>
 
-    <div class="mb-4">
-        <label
-        for="name-task"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Choisissez une couleur pour votre tâche</label
-    >
-   {Object.keys(colors).map((colorKey) => (
-    <label class="flex items-center mb-2" key={colorKey}>
-      <input
-        type="checkbox"
-        id={colorKey}
-        name="color-task"
-        class="form-checkbox h-5 w-5 text-primary-600 transition duration-150 ease-in-out"
-      />
-      <span class="ml-2 text-sm text-gray-900 dark:text-white">{colorKey}</span>
-      <svg
-        class="ml-2 flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" rx="5" fill={colors[colorKey]} />
-      </svg>
-    </label>
-  ))}
+<section class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16">
+    <div
+        class="lg:w-1/2 md:w-3/5 w-4/5 p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        <h3 class="mb-4 text-xl font-semibold dark:text-white">Ajouter une nouvelle tâche</h3>
+        
+        <form id="task-form" action="/" method="post">
+            <div class="mb-4">
+                <label for="name-task" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Comment vous voulez l'appelez ?
+                </label>
+                <input type="text" name="name-task" id="name-task"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Travail" required />
+            </div>
+
+            <div class="mb-4">
+                <label for="color-task" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Choisissez une couleur pour votre tâche
+                </label>
+                <section class="items-center flex flex-col">
+                    <div class="grid grid-cols-6 gap-4 w-full">
+                      {colors.map((color) => (
+                        <div class="flex justify-center items-center">
+                            <input type="radio" id={`color-${color.id}`} name="color" value={color.hexa} class="hidden" />
+                            <label for={`color-${color.id}`}>
+                                <svg id={`svg-${color.id}`} class="hover:opacity-60 cursor-pointer color-svg w-10 h-10 transition duration-75" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-color={color.hexa}>
+                                    <rect width="24" height="24" rx="5" fill={color.hexa} />
+                                </svg>
+                            </label>
+                        </div>
+                        ))}
+                    </div>
+                </section>
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-200">Ajouter</button>
+            </div>
+        </form>
     </div>
 </section>
+
+<script is:inline>
+ const contactForm = document.getElementById("task-form");
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name-task").value;
+  let color = null;
+
+  const colorInputs = document.querySelectorAll('input[name="color"]');
+  colorInputs.forEach((input) => {
+    if (input.checked) {
+      color = input.value;
+    }
+  });
+
+  if (!color) {
+    alert("Veuillez choisir une couleur pour votre tâche.");
+    return; 
+  }
+
+  console.log("Nom de la tâche:", name);
+  console.log("Couleur sélectionnée:", color);
+
+  const url = 'http://localhost:3000/Tache';
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      name: name,
+      Id_Utilisateur: 1, 
+      color: color,
+    }),
+  };
+
+  fetch(url, fetchOptions)
+    .then((response) => response.json())
+    .then((dataJSON) => {
+      console.log("Réponse du serveur:", dataJSON);
+       window.location.href = "/";
+    })
+    .catch((error) => {
+      console.error("Erreur lors de la requête:", error);
+    });
+});
+</script>
+
+
+<style is:global>
+    .color-svg {
+        border: 2px solid transparent;
+        border-radius: 5px;
+    }
+
+    .selected-color {
+        border-color: #4caf50;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 0.375rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
